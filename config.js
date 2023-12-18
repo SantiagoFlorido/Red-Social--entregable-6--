@@ -7,7 +7,7 @@ module.exports={
         host: process.env.HOST || 'http://localhost:3000/',
         jwtSecret: process.env.JWT_SECRET,
         emailpass: process.env.MAIL_PASS,
-        correo: process.env.CORREO,
+        correo: process.env.MAIL,
         
     },
     db: {
