@@ -30,8 +30,8 @@ const getUserById = (req,res) => {
 //const template =(user)=>`<h1>Hola ${user}</h1>` // este es el html
 
 const postUser = (req,res) => {
-    const {firstName, lastName, nickName, email, password, gender, birthday} = req.body
-    userControllers.createUser({firstName, lastName, nickName, email, password, gender, birthday})
+    const {firstName, lastName, nickName, email, password, gender, birthday, profileImg} = req.body
+    userControllers.createUser({firstName, lastName, nickName, email, password, gender, birthday, profileImg})
         .then(async(data)=>{
             await mailer.sendMail({
                 from: `<${config.api.correo}>`,
